@@ -9,15 +9,16 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-    public partial class Form1 : Form
+    public partial class Form1 : Form // Form1 dziedziczy po Form
     {
-       double liczba1, liczba2, wynik;
+       double liczba1, liczba2, wynik; // zmienne przechowujące podane przez użytkownika liczby + wynik
 
         public Form1()
         {
-            InitializeComponent();
+            InitializeComponent(); // inicjalizacja elementów aplikacji zaprojektowanych w designerze
         }
 
+        // blokowanie nieużywanych funkcji, po wyborze działania przez użytkownika (4 osobne wybory - 4 podstawowe działania )
         private void dodawanieToolStripMenuItem_Click(object sender, EventArgs e)
         {
             radioButton1.Checked = dodawanieToolStripMenuItem.Checked = true;
@@ -45,35 +46,38 @@ namespace WindowsFormsApplication1
             dodawanieToolStripMenuItem.Checked = odejmowanieToolStripMenuItem.Checked =
             mnożenieToolStripMenuItem.Checked = false;
         }
+        // koniec blokowania 
 
-        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)//blokowanie wpisywania znakow w textboxie
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e) //blokowanie wpisywania nieuprawnionych znaków w textboxie
         {
-            if ((char.IsDigit(e.KeyChar) == false) && (e.KeyChar != '\b')) e.Handled = true;
+            if ((char.IsDigit(e.KeyChar) == false) && (e.KeyChar != '\b')) e.Handled = true; // jeżeli wprowadzony znak NIE jest cyfrą i nie jest SPACJĄ -> dopuść wprowadzanie 
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            if (double.TryParse(this.textBox1.Text, out liczba1) == true) this.button1.Enabled = false;
+            if (double.TryParse(this.textBox1.Text, out liczba1) == true) this.button1.Enabled = false; // liczba wpisana w textBox1 ląduje w zmiennej liczba1, button1 ("LICZ") pozostaje wciśnięty
             else this.button1.Enabled = false;
         }
 
-        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e) //blokowanie wpisywania nieuprawnionych znaków w textboxie
         {
             if ((char.IsDigit(e.KeyChar) == false) && (e.KeyChar != '\b')) e.Handled = true;
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            if (double.TryParse(this.textBox2.Text, out liczba2) == true) this.button1.Enabled = true;
+            if (double.TryParse(this.textBox2.Text, out liczba2) == true) this.button1.Enabled = true; // liczba wpisana w textBox2 ląduje w zmiennej liczba2, button1 ("LICZ") zostaje odblokowany wciśnięty
             else this.button2.Enabled = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             {
-                button2.Enabled = true;
-                button3.Enabled = true;
+                button2.Enabled = true; // czyszczenie Wyniku
+                button3.Enabled = true; // czyszczenie Historii 
             }
+
+            // sprawdzanie jakie działanie ma zostać wykonane
 
             if (radioButton1.Checked)
                 wynik = liczba1 + liczba2;
@@ -83,7 +87,7 @@ namespace WindowsFormsApplication1
                 wynik = liczba1 * liczba2;
             else if (radioButton4.Checked)
             {
-                if (liczba2 == 0)
+                if (liczba2 == 0) // wyjątek - dzielenie przez 0 
                 {
 
                     MessageBox.Show("Dzielisz przez 0 !",
@@ -95,14 +99,14 @@ namespace WindowsFormsApplication1
                 }
 
             }
-            richTextBox1.Text += wynik.ToString() + "\n";
+            richTextBox1.Text += wynik.ToString() + "\n"; // "\n" -> kolejny wynik w nowej lini 
             richTextBox2.Text += liczba1 + "\n" + liczba2 + "\n";
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             {
-               richTextBox1.Clear();
+               richTextBox1.Clear(); // czyszczenie wyników
                richTextBox1.Focus();
                button2.Enabled = false;
             }

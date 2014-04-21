@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -175,7 +176,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3.Location = new System.Drawing.Point(175, 41);
+            this.label3.Location = new System.Drawing.Point(175, 55);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(111, 18);
             this.label3.TabIndex = 5;
@@ -195,7 +196,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label4.Location = new System.Drawing.Point(175, 136);
+            this.label4.Location = new System.Drawing.Point(175, 147);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(90, 18);
             this.label4.TabIndex = 7;
@@ -219,7 +220,7 @@
             this.opeToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(531, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(530, 24);
             this.menuStrip1.TabIndex = 9;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -232,39 +233,39 @@
             this.toolStripSeparator2,
             this.wyjścieAltF4ToolStripMenuItem});
             this.nicToolStripMenuItem.Name = "nicToolStripMenuItem";
-            this.nicToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
+            this.nicToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
             this.nicToolStripMenuItem.Text = "Polecenia";
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.C)));
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(226, 22);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(228, 22);
             this.toolStripMenuItem1.Text = "Wyczyść wynik  Alt+C";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(223, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(225, 6);
             // 
             // liczToolStripMenuItem
             // 
             this.liczToolStripMenuItem.Name = "liczToolStripMenuItem";
-            this.liczToolStripMenuItem.Size = new System.Drawing.Size(226, 22);
+            this.liczToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
             this.liczToolStripMenuItem.Text = "Licz";
             this.liczToolStripMenuItem.Click += new System.EventHandler(this.liczToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(223, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(225, 6);
             // 
             // wyjścieAltF4ToolStripMenuItem
             // 
             this.wyjścieAltF4ToolStripMenuItem.Name = "wyjścieAltF4ToolStripMenuItem";
             this.wyjścieAltF4ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
-            this.wyjścieAltF4ToolStripMenuItem.Size = new System.Drawing.Size(226, 22);
+            this.wyjścieAltF4ToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
             this.wyjścieAltF4ToolStripMenuItem.Text = "Wyjście  Alt+F4";
             this.wyjścieAltF4ToolStripMenuItem.Click += new System.EventHandler(this.wyjścieAltF4ToolStripMenuItem_Click);
             // 
@@ -276,7 +277,7 @@
             this.mnożenieToolStripMenuItem,
             this.dzielenieToolStripMenuItem});
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(63, 20);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(66, 20);
             this.toolStripMenuItem2.Text = "Operacja";
             // 
             // dodawanieToolStripMenuItem
@@ -310,7 +311,7 @@
             // opeToolStripMenuItem
             // 
             this.opeToolStripMenuItem.Name = "opeToolStripMenuItem";
-            this.opeToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
+            this.opeToolStripMenuItem.Size = new System.Drawing.Size(86, 20);
             this.opeToolStripMenuItem.Text = "O programie";
             this.opeToolStripMenuItem.Click += new System.EventHandler(this.opeToolStripMenuItem_Click);
             // 
@@ -322,9 +323,9 @@
             // richTextBox2
             // 
             this.richTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.richTextBox2.Location = new System.Drawing.Point(15, 76);
+            this.richTextBox2.Location = new System.Drawing.Point(15, 56);
             this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(100, 112);
+            this.richTextBox2.Size = new System.Drawing.Size(100, 132);
             this.richTextBox2.TabIndex = 10;
             this.richTextBox2.Text = "";
             this.richTextBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.richTextBox2_KeyPress);
@@ -333,7 +334,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(12, 41);
+            this.label1.Location = new System.Drawing.Point(12, 35);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(59, 18);
             this.label1.TabIndex = 11;
@@ -375,7 +376,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(531, 240);
+            this.AutoSize = true;
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.ClientSize = new System.Drawing.Size(534, 241);
             this.Controls.Add(this.richTextBox2);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button3);
@@ -391,7 +394,10 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.ForeColor = System.Drawing.Color.Black;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(550, 280);
             this.Name = "Form1";
             this.Text = "Kalkulator";
             this.groupBox1.ResumeLayout(false);

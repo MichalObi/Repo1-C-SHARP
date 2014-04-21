@@ -30,7 +30,7 @@ namespace Komunikator
             }
             catch
             {
-                textBox1.Text = String.Empty;
+                textBox1.Text = String.Empty; // wyczyszczenie błędnie podanego IP
                 return; // powrót z pętli
             }
 
@@ -66,7 +66,7 @@ namespace Komunikator
                     nowyKlient.Close();
                     serwer.Stop();//pauzujemy serwer
                 }
-                while (button1.Enabled == false);
+                while (button1.Enabled == false); // podczas gdy przycisk 1 jest wciśnięty
 
             }
             catch
